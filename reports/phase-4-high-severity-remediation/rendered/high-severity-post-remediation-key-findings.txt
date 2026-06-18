@@ -1,0 +1,27 @@
+High-Severity Post-Remediation Validation
+=========================================
+
+Target:
+tflearn-ubuntu-vm.internal.cloudapp.net (10.10.1.4)
+
+Remediation script:
+scripts/remediate-phase4-high-severity.sh
+
+Remediation action:
+
+- Removed metasploitable2-lab container
+- Removed vulnerable-apache-249 container
+- Preserved Juice Shop and DVWA for later web app testing practice
+
+Post-remediation Nmap validation:
+
+8021/tcp closed
+8022/tcp closed
+8023/tcp closed
+8082/tcp closed
+8083/tcp closed
+8180/tcp closed
+8667/tcp closed
+
+Validation result:
+The high-severity vulnerable services were removed successfully.

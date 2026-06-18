@@ -1,0 +1,4 @@
+# Nmap 7.94SVN scan initiated Wed Jun 17 04:01:34 2026 as: nmap -Pn -sS -sV -sC -p 3000 --script http-title,http-headers,http-enum,http-vuln* --reason -oA /home/azureuser/nmap-juice-shop/azure-juice-shop-webapp 10.10.1.4
+Host: 10.10.1.4 (tflearn-ubuntu-vm.internal.cloudapp.net)	Status: Up
+Host: 10.10.1.4 (tflearn-ubuntu-vm.internal.cloudapp.net)	Ports: 3000/open/tcp//ppp?///
+# Nmap done at Wed Jun 17 04:01:45 2026 -- 1 IP address (1 host up) scanned in 11.36 seconds

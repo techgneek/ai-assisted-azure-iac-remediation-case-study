@@ -1,0 +1,4 @@
+# Nmap 7.94SVN scan initiated Thu Jun 18 00:45:13 2026 as: nmap -Pn -sS -sV -sC --script ftp-anon,http-title,http-headers,http-enum,http-methods,http-robots.txt --reason -p 22,2121,3000,8080,8081 -oA /home/azureuser/nmap-phase4-remediation/azure-target-post-remediation 10.10.1.4
+Host: 10.10.1.4 (tflearn-ubuntu-vm.internal.cloudapp.net)	Status: Up
+Host: 10.10.1.4 (tflearn-ubuntu-vm.internal.cloudapp.net)	Ports: 22/open/tcp//ssh//OpenSSH 9.6p1 Ubuntu 3ubuntu13.16 (Ubuntu Linux; protocol 2.0)/, 2121/closed/tcp//ccproxy-ftp///, 3000/open/tcp//ppp?///, 8080/open/tcp//http//Apache httpd 2.4.25 ((Debian))/, 8081/closed/tcp//blackice-icecap///
+# Nmap done at Thu Jun 18 00:45:25 2026 -- 1 IP address (1 host up) scanned in 11.80 seconds

@@ -1,0 +1,4 @@
+# Nmap 7.94SVN scan initiated Wed Jun 17 03:40:16 2026 as: nmap -Pn -sS -sV -sC --script vuln --reason --open -oA /home/azureuser/nmap-baseline/azure-ubuntu-baseline 10.10.1.4
+Host: 10.10.1.4 (tflearn-ubuntu-vm.internal.cloudapp.net)	Status: Up
+Host: 10.10.1.4 (tflearn-ubuntu-vm.internal.cloudapp.net)	Ports: 22/open/tcp//ssh//OpenSSH 9.6p1 Ubuntu 3ubuntu13.16 (Ubuntu Linux; protocol 2.0)/	Ignored State: closed (999)
+# Nmap done at Wed Jun 17 03:40:27 2026 -- 1 IP address (1 host up) scanned in 10.66 seconds

@@ -1,0 +1,32 @@
+High-Severity Pre-Remediation Evidence
+======================================
+
+Target:
+tflearn-ubuntu-vm.internal.cloudapp.net (10.10.1.4)
+
+Internal-only vulnerable services:
+
+8021/tcp open ftp    vsftpd 2.3.4
+8022/tcp open ssh    OpenSSH 4.7p1 Debian
+8023/tcp open telnet Linux telnetd
+8083/tcp open http   Apache httpd 2.2.8
+8180/tcp open http   Apache Tomcat/5.5
+8667/tcp open irc    UnrealIRCd
+
+Nessus severity counts:
+
+Critical: 4
+High:     0
+Medium:   3
+Low:      4
+Info:    38
+
+Critical Nessus findings:
+
+- Apache Tomcat SEoL (<= 5.5.x)
+- Canonical Ubuntu Linux SEoL (8.04.x)
+- Debian OpenSSH/OpenSSL Package Random Number Generator Weakness
+- UnrealIRCd Backdoor Detection
+
+Enterprise impact:
+In the portfolio scenario, this server is treated as production-facing and sensitive, requiring expedited CAB approval and immediate remediation.

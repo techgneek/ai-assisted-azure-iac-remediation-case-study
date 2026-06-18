@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Thu Jun 18 01:59:02 2026 as: nmap -Pn -sS -sV -sC -&#45;reason -p 8021,8022,8023,8082,8083,8180,8667 -oA /home/azureuser/nmap-phase4-high-severity/high-severity-post-remediation 10.10.1.4 -->
+<nmaprun scanner="nmap" args="nmap -Pn -sS -sV -sC -&#45;reason -p 8021,8022,8023,8082,8083,8180,8667 -oA /home/azureuser/nmap-phase4-high-severity/high-severity-post-remediation 10.10.1.4" start="1781747942" startstr="Thu Jun 18 01:59:02 2026" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="7" services="8021-8023,8082-8083,8180,8667"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.10.1.4" addrtype="ipv4"/>
+<address addr="12:34:56:78:9A:BC" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1781747942" endtime="1781747942"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.10.1.4" addrtype="ipv4"/>
+<address addr="12:34:56:78:9A:BC" addrtype="mac"/>
+<hostnames>
+<hostname name="tflearn-ubuntu-vm.internal.cloudapp.net" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="8021"><state state="closed" reason="reset" reason_ttl="64"/><service name="ftp-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8022"><state state="closed" reason="reset" reason_ttl="64"/><service name="oa-system" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8023"><state state="closed" reason="reset" reason_ttl="64"/><service name="arca-api" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8082"><state state="closed" reason="reset" reason_ttl="64"/><service name="blackice-alerts" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8083"><state state="closed" reason="reset" reason_ttl="64"/><service name="us-srv" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8180"><state state="closed" reason="reset" reason_ttl="64"/></port>
+<port protocol="tcp" portid="8667"><state state="closed" reason="reset" reason_ttl="64"/></port>
+</ports>
+<times srtt="2973" rttvar="2853" to="100000"/>
+</host>
+<runstats><finished time="1781747942" timestr="Thu Jun 18 01:59:02 2026" summary="Nmap done at Thu Jun 18 01:59:02 2026; 1 IP address (1 host up) scanned in 0.24 seconds" elapsed="0.24" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

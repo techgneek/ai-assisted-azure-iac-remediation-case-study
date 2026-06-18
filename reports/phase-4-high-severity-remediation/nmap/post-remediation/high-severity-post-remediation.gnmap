@@ -1,0 +1,4 @@
+# Nmap 7.94SVN scan initiated Thu Jun 18 01:59:02 2026 as: nmap -Pn -sS -sV -sC --reason -p 8021,8022,8023,8082,8083,8180,8667 -oA /home/azureuser/nmap-phase4-high-severity/high-severity-post-remediation 10.10.1.4
+Host: 10.10.1.4 (tflearn-ubuntu-vm.internal.cloudapp.net)	Status: Up
+Host: 10.10.1.4 (tflearn-ubuntu-vm.internal.cloudapp.net)	Ports: 8021/closed/tcp//ftp-proxy///, 8022/closed/tcp//oa-system///, 8023/closed/tcp//arca-api///, 8082/closed/tcp//blackice-alerts///, 8083/closed/tcp//us-srv///, 8180/closed/tcp/////, 8667/closed/tcp/////
+# Nmap done at Thu Jun 18 01:59:02 2026 -- 1 IP address (1 host up) scanned in 0.24 seconds

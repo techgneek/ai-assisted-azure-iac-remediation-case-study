@@ -1,0 +1,17 @@
+.terraform/
+.DS_Store
+.env
+.nessus-*-scan-id
+terraform.tfvars
+*.auto.tfvars
+terraform.tfstate
+terraform.tfstate.*
+*.tfplan
+reports/**/*.json
+reports/**/*scan-id.txt
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json

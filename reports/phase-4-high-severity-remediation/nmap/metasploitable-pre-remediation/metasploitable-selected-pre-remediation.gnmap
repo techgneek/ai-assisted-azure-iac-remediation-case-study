@@ -1,0 +1,4 @@
+# Nmap 7.94SVN scan initiated Thu Jun 18 01:40:14 2026 as: nmap -Pn -sS -sV -sC --reason -p 8021,8022,8023,8083,8180,8667 -oA /home/azureuser/nmap-phase4-high-severity/metasploitable-selected-pre-remediation 10.10.1.4
+Host: 10.10.1.4 (tflearn-ubuntu-vm.internal.cloudapp.net)	Status: Up
+Host: 10.10.1.4 (tflearn-ubuntu-vm.internal.cloudapp.net)	Ports: 8021/open/tcp//ftp//vsftpd 2.3.4/, 8022/open/tcp//ssh//OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)/, 8023/open/tcp//telnet//Linux telnetd/, 8083/open/tcp//http//Apache httpd 2.2.8 ((Ubuntu) DAV|2)/, 8180/open/tcp//http//Apache Tomcat|Coyote JSP engine 1.1/, 8667/open/tcp//irc//UnrealIRCd/
+# Nmap done at Thu Jun 18 01:40:32 2026 -- 1 IP address (1 host up) scanned in 18.55 seconds

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Thu Jun 18 01:40:14 2026 as: nmap -Pn -sS -sV -sC -&#45;reason -p 8021,8022,8023,8083,8180,8667 -oA /home/azureuser/nmap-phase4-high-severity/metasploitable-selected-pre-remediation 10.10.1.4 -->
+<nmaprun scanner="nmap" args="nmap -Pn -sS -sV -sC -&#45;reason -p 8021,8022,8023,8083,8180,8667 -oA /home/azureuser/nmap-phase4-high-severity/metasploitable-selected-pre-remediation 10.10.1.4" start="1781746814" startstr="Thu Jun 18 01:40:14 2026" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="6" services="8021-8023,8083,8180,8667"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.10.1.4" addrtype="ipv4"/>
+<address addr="12:34:56:78:9A:BC" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1781746814" endtime="1781746832"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.10.1.4" addrtype="ipv4"/>
+<address addr="12:34:56:78:9A:BC" addrtype="mac"/>
+<hostnames>
+<hostname name="tflearn-ubuntu-vm.internal.cloudapp.net" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="8021"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="2.3.4" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:2.3.4</cpe></service><script id="ftp-syst" output="&#xa;  STAT: &#xa;FTP server status:&#xa;     Connected to 10.10.1.5&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     vsFTPd 2.3.4 - secure, fast, stable&#xa;End of status"><elem key="STAT">&#xa;FTP server status:&#xa;     Connected to 10.10.1.5&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     vsFTPd 2.3.4 - secure, fast, stable&#xa;End of status</elem>
+</script><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;Can&apos;t get directory listing: PASV IP 172.17.0.5 is not the same as 10.10.1.4"/></port>
+<port protocol="tcp" portid="8022"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="4.7p1 Debian 8ubuntu1" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:4.7p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  1024 60:0f:cf:e1:c0:5f:6a:74:d6:90:24:fa:c4:d5:6c:cd (DSA)&#xa;  2048 56:56:24:0f:21:1d:de:a7:2b:ae:61:b1:24:3d:e8:f3 (RSA)"><table>
+<elem key="key">AAAAB3NzaC1kc3MAAACBALz4hsc8a2Srq4nlW960qV8xwBG0JC+jI7fWxm5METIJH4tKr/xUTwsTYEYnaZLzcOiy21D3ZvOwYb6AA3765zdgCd2Tgand7F0YD5UtXG7b7fbz99chReivL0SIWEG/E96Ai+pqYMP2WD5KaOJwSIXSUajnU5oWmY5x85sBw+XDAAAAFQDFkMpmdFQTF+oRqaoSNVU7Z+hjSwAAAIBCQxNKzi1TyP+QJIFa3M0oLqCVWI0We/ARtXrzpBOJ/dt0hTJXCeYisKqcdwdtyIn8OUCOyrIjqNuA2QW217oQ6wXpbFh+5AQm8Hl3b6C6o8lX3Ptw+Y4dp0lzfWHwZ/jzHwtuaDQaok7u1f971lEazeJLqfiWrAzoklqSWyDQJAAAAIA1lAD3xWYkeIeHv/R3P9i+XaoI7imFkMuYXCDTq843YU6Td+0mWpllCqAWUV/CQamGgQLtYy5S0ueoks01MoKdOMMhKVwqdr08nvCBdNKjIEd3gH6oBk/YRnjzxlEAYBsvCmM4a0jmhz0oNiRWlc/F+bkUeFKrBx/D2fdfZmhrGg==</elem>
+<elem key="type">ssh-dss</elem>
+<elem key="bits">1024</elem>
+<elem key="fingerprint">600fcfe1c05f6a74d69024fac4d56ccd</elem>
+</table>
+<table>
+<elem key="key">AAAAB3NzaC1yc2EAAAABIwAAAQEAstqnuFMBOZvO3WTEjP4TUdjgWkIVNdTq6kboEDjteOfc65TlI7sRvQBwqAhQjeeyyIk8T55gMDkOD0akSlSXvLDcmcdYfxeIF0ZSuT+nkRhij7XSSA/Oc5QSk3sJ/SInfb78e3anbRHpmkJcVgETJ5WhKObUNf1AKZW++4Xlc63M4KI5cjvMMIPEVOyR3AKmI78Fo3HJjYucg87JjLeC66I7+dlEYX6zT8i1XYwa/L1vZ3qSJISGVu8kRPikMv/cNSvki4j+qDYyZ2E5497W87+Ed46/8P42LNGoOV8OcX/ro6pAcbEPUdUEfkJrqi2YXbhvwIJ0gFMb6wfe5cnQew==</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="fingerprint">5656240f211ddea72bae61b1243de8f3</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="8023"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="telnet" product="Linux telnetd" ostype="Linux" method="probed" conf="10"><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="8083"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.2.8" extrainfo="(Ubuntu) DAV/2" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.8</cpe></service><script id="http-server-header" output="Apache/2.2.8 (Ubuntu) DAV/2"><elem>Apache/2.2.8 (Ubuntu) DAV/2</elem>
+</script><script id="http-title" output="Metasploitable2 - Linux"><elem key="title">Metasploitable2 - Linux</elem>
+</script></port>
+<port protocol="tcp" portid="8180"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache Tomcat/Coyote JSP engine" version="1.1" method="probed" conf="10"><cpe>cpe:/a:apache:coyote_http_connector:1.1</cpe></service><script id="http-favicon" output="Apache Tomcat"/><script id="http-server-header" output="Apache-Coyote/1.1"><elem>Apache-Coyote/1.1</elem>
+</script><script id="http-title" output="Apache Tomcat/5.5"><elem key="title">Apache Tomcat/5.5</elem>
+</script></port>
+<port protocol="tcp" portid="8667"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="irc" product="UnrealIRCd" hostname="irc.Metasploitable.LAN" method="probed" conf="10"><cpe>cpe:/a:unrealircd:unrealircd</cpe></service><script id="irc-info" output="&#xa;  users: 1&#xa;  servers: 1&#xa;  lusers: 1&#xa;  lservers: 0&#xa;  server: irc.Metasploitable.LAN&#xa;  version: Unreal3.2.8.1. irc.Metasploitable.LAN &#xa;  uptime: 0 days, 0:00:30&#xa;  source ident: nmap&#xa;  source host: Test-278A6DBB.internal.cloudapp.net&#xa;  error: Closing Link: ubqoqbmeh[tflearn-nessus-scanner-vm.internal.cloudapp.net] (Quit: ubqoqbmeh)"><elem key="users">1</elem>
+<elem key="servers">1</elem>
+<elem key="lusers">1</elem>
+<elem key="lservers">0</elem>
+<elem key="server">irc.Metasploitable.LAN</elem>
+<elem key="version">Unreal3.2.8.1. irc.Metasploitable.LAN </elem>
+<elem key="uptime">0 days, 0:00:30</elem>
+<elem key="source ident">nmap</elem>
+<elem key="source host">Test-278A6DBB.internal.cloudapp.net</elem>
+<elem key="error">Closing Link: ubqoqbmeh[tflearn-nessus-scanner-vm.internal.cloudapp.net] (Quit: ubqoqbmeh)</elem>
+</script></port>
+</ports>
+<times srtt="1772" rttvar="2496" to="100000"/>
+</host>
+<runstats><finished time="1781746832" timestr="Thu Jun 18 01:40:32 2026" summary="Nmap done at Thu Jun 18 01:40:32 2026; 1 IP address (1 host up) scanned in 18.55 seconds" elapsed="18.55" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

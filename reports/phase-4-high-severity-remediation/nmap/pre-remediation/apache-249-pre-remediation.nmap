@@ -1,0 +1,23 @@
+# Nmap 7.94SVN scan initiated Thu Jun 18 00:58:46 2026 as: nmap -Pn -sS -sV -sC --script http-title,http-headers,http-server-header --reason -p 8082 -oA /home/azureuser/nmap-phase4-high-severity/apache-249-pre-remediation 10.10.1.4
+Nmap scan report for tflearn-ubuntu-vm.internal.cloudapp.net (10.10.1.4)
+Host is up, received arp-response (0.0027s latency).
+
+PORT     STATE SERVICE REASON         VERSION
+8082/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.49 ((Unix))
+|_http-title: High Severity Lab Apache 2.4.49
+| http-headers: 
+|   Date: Thu, 18 Jun 2026 00:58:53 GMT
+|   Server: Apache/2.4.49 (Unix)
+|   Last-Modified: Thu, 18 Jun 2026 00:58:25 GMT
+|   ETag: "12d-6547cac6a61c8"
+|   Accept-Ranges: bytes
+|   Content-Length: 301
+|   Connection: close
+|   Content-Type: text/html
+|   
+|_  (Request type: HEAD)
+|_http-server-header: Apache/2.4.49 (Unix)
+MAC Address: 12:34:56:78:9A:BC (Unknown)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jun 18 00:58:53 2026 -- 1 IP address (1 host up) scanned in 6.22 seconds

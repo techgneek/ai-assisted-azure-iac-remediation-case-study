@@ -1,0 +1,25 @@
+Post-Remediation Nmap Validation
+================================
+
+Target:
+tflearn-ubuntu-vm.internal.cloudapp.net (10.10.1.4)
+
+Scan command:
+nmap -Pn -sS -sV -sC --script ftp-anon,http-title,http-headers,http-enum,http-methods,http-robots.txt --reason -p 22,2121,3000,8080,8081 10.10.1.4
+
+Remediated findings:
+
+2121/tcp closed ccproxy-ftp
+Result: Anonymous FTP is no longer reachable.
+
+8081/tcp closed blackice-icecap
+Result: Directory-listing web service is no longer reachable.
+
+Remaining intentional case study services:
+
+22/tcp   open ssh  OpenSSH 9.6p1 Ubuntu
+3000/tcp open http OWASP Juice Shop
+8080/tcp open http DVWA on Apache httpd 2.4.25
+
+Validation result:
+The selected Phase 4 remediation items were successfully closed.

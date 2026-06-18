@@ -1,0 +1,55 @@
+Nmap Vulnerable Mode Key Findings
+================================
+
+Scan command:
+nmap -Pn -sS -sV -sC --script ftp-anon,http-title,http-headers,http-enum,http-methods,http-robots.txt --reason -p 22,2121,3000,8080,8081 10.10.1.4
+
+Target:
+tflearn-ubuntu-vm.internal.cloudapp.net (10.10.1.4)
+
+Open ports:
+
+22/tcp   open  ssh   OpenSSH 9.6p1 Ubuntu
+2121/tcp open  ftp   vsftpd 3.0.5
+3000/tcp open  http  OWASP Juice Shop
+8080/tcp open  http  Apache httpd 2.4.25 / DVWA
+8081/tcp open  http  nginx 1.25.5 / directory listing
+
+Finding: Anonymous FTP
+
+2121/tcp open ftp vsftpd 3.0.5
+ftp-anon: Anonymous FTP login allowed
+-rw-r--r-- README.txt
+drwxr-xr-x lab-drop
+
+Finding: DVWA
+
+8080/tcp open http Apache httpd 2.4.25 ((Debian))
+http-title: Login :: Damn Vulnerable Web Application (DVWA) v1.10
+Supported Methods: GET HEAD POST OPTIONS
+http-robots.txt: 1 disallowed entry: /
+Set-Cookie: security=low
+http-enum:
+  /login.php: Possible admin folder
+  /robots.txt: Robots file
+  /.gitignore: Revision control ignore file
+  /config/: Potentially interesting directory with listing
+  /docs/: Potentially interesting directory with listing
+  /external/: Potentially interesting directory with listing
+
+Finding: Directory Listing
+
+8081/tcp open http nginx 1.25.5
+http-title: Index of /
+X-Lab-Intentional-Vulnerability: directory-listing-enabled
+http-enum:
+  /: Root directory with directory listing
+  /backups/: Backup folder with directory listing
+  /README.txt: Interesting readme
+
+Finding: Juice Shop
+
+3000/tcp open http
+title: OWASP Juice Shop
+X-Recruiting: /#/jobs
+Access-Control-Allow-Origin: *

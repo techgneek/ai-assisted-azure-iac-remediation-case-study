@@ -1,0 +1,22 @@
+=== Phase 4 High-Severity Host Health Check ===
+Timestamp: 2026-06-18T02:14:26Z
+Hostname: tflearn-ubuntu-vm
+
+=== Running containers ===
+NAMES        IMAGE                   PORTS
+dvwa         vulnerables/web-dvwa    0.0.0.0:8080->80/tcp, [::]:8080->80/tcp
+juice-shop   bkimminich/juice-shop   0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp
+
+=== Checking for remediated containers ===
+PASS: Remediated vulnerable containers are not present.
+
+=== Checking remediated listening ports ===
+PASS: Remediated high-severity ports are not listening.
+
+=== Services intentionally retained for later case study practice ===
+tcp   LISTEN 0      4096          0.0.0.0:3000       0.0.0.0:*    users:(("docker-proxy",pid=10186,fd=7)) ino:34111 sk:1001 cgroup:/system.slice/docker.service <->                 
+tcp   LISTEN 0      4096          0.0.0.0:8080       0.0.0.0:*    users:(("docker-proxy",pid=9689,fd=7)) ino:28086 sk:f cgroup:/system.slice/docker.service <->                     
+tcp   LISTEN 0      4096             [::]:3000          [::]:*    users:(("docker-proxy",pid=10192,fd=7)) ino:34112 sk:1002 cgroup:/system.slice/docker.service v6only:1 <->        
+tcp   LISTEN 0      4096             [::]:8080          [::]:*    users:(("docker-proxy",pid=9694,fd=7)) ino:28087 sk:11 cgroup:/system.slice/docker.service v6only:1 <->           
+
+HEALTH CHECK RESULT: PASS

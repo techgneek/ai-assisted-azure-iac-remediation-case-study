@@ -1,0 +1,16 @@
+# Nmap 7.94SVN scan initiated Thu Jun 18 01:59:02 2026 as: nmap -Pn -sS -sV -sC --reason -p 8021,8022,8023,8082,8083,8180,8667 -oA /home/azureuser/nmap-phase4-high-severity/high-severity-post-remediation 10.10.1.4
+Nmap scan report for tflearn-ubuntu-vm.internal.cloudapp.net (10.10.1.4)
+Host is up, received arp-response (0.0030s latency).
+
+PORT     STATE  SERVICE         REASON       VERSION
+8021/tcp closed ftp-proxy       reset ttl 64
+8022/tcp closed oa-system       reset ttl 64
+8023/tcp closed arca-api        reset ttl 64
+8082/tcp closed blackice-alerts reset ttl 64
+8083/tcp closed us-srv          reset ttl 64
+8180/tcp closed unknown         reset ttl 64
+8667/tcp closed unknown         reset ttl 64
+MAC Address: 12:34:56:78:9A:BC (Unknown)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jun 18 01:59:02 2026 -- 1 IP address (1 host up) scanned in 0.24 seconds

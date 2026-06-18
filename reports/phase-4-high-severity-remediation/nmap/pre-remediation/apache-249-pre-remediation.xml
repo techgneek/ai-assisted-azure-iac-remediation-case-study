@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Thu Jun 18 00:58:46 2026 as: nmap -Pn -sS -sV -sC -&#45;script http-title,http-headers,http-server-header -&#45;reason -p 8082 -oA /home/azureuser/nmap-phase4-high-severity/apache-249-pre-remediation 10.10.1.4 -->
+<nmaprun scanner="nmap" args="nmap -Pn -sS -sV -sC -&#45;script http-title,http-headers,http-server-header -&#45;reason -p 8082 -oA /home/azureuser/nmap-phase4-high-severity/apache-249-pre-remediation 10.10.1.4" start="1781744326" startstr="Thu Jun 18 00:58:46 2026" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="8082"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.10.1.4" addrtype="ipv4"/>
+<address addr="12:34:56:78:9A:BC" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1781744326" endtime="1781744333"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.10.1.4" addrtype="ipv4"/>
+<address addr="12:34:56:78:9A:BC" addrtype="mac"/>
+<hostnames>
+<hostname name="tflearn-ubuntu-vm.internal.cloudapp.net" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="8082"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.49" extrainfo="(Unix)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.49</cpe></service><script id="http-title" output="High Severity Lab Apache 2.4.49"><elem key="title">High Severity Lab Apache 2.4.49</elem>
+</script><script id="http-headers" output="&#xa;  Date: Thu, 18 Jun 2026 00:58:53 GMT&#xa;  Server: Apache/2.4.49 (Unix)&#xa;  Last-Modified: Thu, 18 Jun 2026 00:58:25 GMT&#xa;  ETag: &quot;12d-6547cac6a61c8&quot;&#xa;  Accept-Ranges: bytes&#xa;  Content-Length: 301&#xa;  Connection: close&#xa;  Content-Type: text/html&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-server-header" output="Apache/2.4.49 (Unix)"><elem>Apache/2.4.49 (Unix)</elem>
+</script></port>
+</ports>
+<times srtt="2729" rttvar="5758" to="100000"/>
+</host>
+<runstats><finished time="1781744333" timestr="Thu Jun 18 00:58:53 2026" summary="Nmap done at Thu Jun 18 00:58:53 2026; 1 IP address (1 host up) scanned in 6.22 seconds" elapsed="6.22" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
