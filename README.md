@@ -45,14 +45,32 @@ ICMP Timestamp Request Remote Date Disclosure
 The case study follows a simple enterprise pattern: build the environment, discover risk, escalate through change control, remediate, and validate.
 
 ```mermaid
-flowchart LR
-    A[Terraform Buildout] --> B[Baseline Scans]
-    B --> C[Controlled Vulnerable Services]
-    C --> D[Nessus Critical Findings]
-    D --> E[CAB-Style Approval]
-    E --> F[Scripted Remediation]
-    F --> G[Nmap + Nessus Validation]
-    G --> H[Jira-Style Closure]
+flowchart TB
+    subgraph Row1[" "]
+        direction LR
+        A["1. Terraform<br/>Buildout"] --> B["2. Baseline<br/>Scans"]
+        B --> C["3. Controlled<br/>Vulnerable Services"]
+        C --> D["4. Nessus<br/>Critical Findings"]
+    end
+
+    subgraph Row2[" "]
+        direction LR
+        E["5. CAB-Style<br/>Approval"] --> F["6. Scripted<br/>Remediation"]
+        F --> G["7. Nmap + Nessus<br/>Validation"]
+        G --> H["8. Jira-Style<br/>Closure"]
+    end
+
+    D --> E
+
+    classDef build fill:#EAF3FF,stroke:#2563EB,stroke-width:2px,color:#111827;
+    classDef risk fill:#FFF1F2,stroke:#DC2626,stroke-width:2px,color:#111827;
+    classDef action fill:#ECFDF5,stroke:#059669,stroke-width:2px,color:#111827;
+    classDef close fill:#F5F3FF,stroke:#7C3AED,stroke-width:2px,color:#111827;
+
+    class A,B build;
+    class C,D risk;
+    class E,F,G action;
+    class H close;
 ```
 
 ### Before and After
