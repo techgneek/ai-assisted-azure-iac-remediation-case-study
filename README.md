@@ -46,18 +46,18 @@ The case study follows a simple enterprise pattern: build the environment, disco
 
 ```mermaid
 flowchart TB
-    subgraph Row1[" "]
+    subgraph Discovery["Discovery and Triage"]
         direction LR
-        A["1. Terraform<br/>Buildout"] --> B["2. Baseline<br/>Scans"]
-        B --> C["3. Controlled<br/>Vulnerable Services"]
-        C --> D["4. Nessus<br/>Critical Findings"]
+        A["1. Terraform Buildout"] --> B["2. Baseline Scans"]
+        B --> C["3. Controlled Vulnerable Services"]
+        C --> D["4. Nessus Critical Findings"]
     end
 
-    subgraph Row2[" "]
+    subgraph Remediation["Remediation and Closure"]
         direction LR
-        E["5. CAB-Style<br/>Approval"] --> F["6. Scripted<br/>Remediation"]
-        F --> G["7. Nmap + Nessus<br/>Validation"]
-        G --> H["8. Jira-Style<br/>Closure"]
+        E["5. CAB-Style Approval"] --> F["6. Scripted Remediation"]
+        F --> G["7. Nmap + Nessus Validation"]
+        G --> H["8. Jira-Style Closure"]
     end
 
     D --> E
