@@ -40,6 +40,20 @@ The remaining Low finding is unrelated to the remediated Critical services:
 ICMP Timestamp Request Remote Date Disclosure
 ```
 
+Final environment status:
+
+```text
+Closed - Remediated, validated, documented, and destroyed with Terraform
+```
+
+### Case Study Closeout Evidence
+
+| Terraform Buildout | Critical Findings |
+| --- | --- |
+| <img src="reports/phase-1-terraform/screenshots/azure-resource-group-created-redacted.png" alt="Azure resource group and Terraform-created resources" width="430"> | <img src="reports/phase-4-high-severity-remediation/screenshots/nessus-high-severity-metasploitable-pre-remediation.png" alt="Nessus pre-remediation Critical findings" width="430"> |
+| Remediation Validation | Terraform Destroy |
+| <img src="reports/phase-4-high-severity-remediation/screenshots/nessus-high-severity-post-remediation-validation.png" alt="Nessus post-remediation validation" width="430"> | <img src="reports/destroy/screenshots/azure-all-resources-post-destroy-sanitized.png" alt="Azure all resources after Terraform destroy" width="430"> |
+
 ## Visual Case Study Snapshot
 
 The case study follows a simple enterprise pattern: build the environment, discover risk, escalate through change control, remediate, and validate.
@@ -774,11 +788,12 @@ Check status:
 az vm list -d -g rg-terraform-learning-lab --query "[].{name:name,powerState:powerState,privateIps:privateIps,publicIps:publicIps}" -o table
 ```
 
-Current validation after the final screenshot session:
+Final validation after closeout:
 
 ```text
-tflearn-nessus-scanner-vm  VM deallocated
-tflearn-ubuntu-vm          VM deallocated
+Terraform destroy completed successfully.
+13 Terraform-managed resources were destroyed.
+No case study VMs remained running.
 ```
 
 ## Destroy the Case Study Environment
