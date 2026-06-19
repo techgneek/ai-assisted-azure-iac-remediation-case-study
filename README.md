@@ -701,6 +701,26 @@ This project demonstrates practical skills across multiple areas:
 - Evidence collection
 - Portfolio-ready technical documentation
 
+## Budget and Lessons Learned
+
+This case study was intentionally built as a small, cost-aware Azure environment. The goal was not only to deploy and secure infrastructure, but also to show operational discipline around cloud spend.
+
+Key budget lessons:
+
+- Deallocating VMs stops compute billing while preserving the environment for later use.
+- Disks, public IP addresses, storage, and some networking resources can continue to generate small residual costs even when VMs are stopped.
+- Resource tags make it easier to answer ownership and cost questions during reviews.
+- Cost should be reviewed by resource group, service, and date so unexpected spend can be caught early.
+- Temporary security infrastructure should have a cleanup plan before it is built.
+
+Enterprise takeaway:
+
+```text
+Security teams should treat cost visibility as part of operational responsibility. 
+Unused scanners, workstations, test servers, and training environments can create 
+avoidable spend if they are left running after the work is complete.
+```
+
 ## Cost Control and FinOps Lesson
 
 Security work in the cloud has a cost impact. This case study intentionally included cost tracking because enterprise security teams are often responsible for building temporary test environments, scanners, sandboxes, and investigation workstations. Those resources need the same operational discipline as production systems.
@@ -789,4 +809,4 @@ Future improvements:
 - Add a Windows VM for credentialed Windows scanning and Defender/Sysmon telemetry.
 - Add a lightweight SIEM workflow with Microsoft Sentinel.
 - Convert the case study into a slide deck.
-- Push the finalized project to GitHub.
+- Add final post-destroy evidence after the Terraform cleanup is complete.
