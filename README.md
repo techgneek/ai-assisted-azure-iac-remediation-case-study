@@ -165,6 +165,12 @@ flowchart TB
 | Markdown | Portfolio documentation and evidence writeups |
 | Azure Portal | Visual verification and screenshots for scan evidence |
 
+### Tools in Action
+
+The workflow used VS Code, GitHub Copilot, Codex, Claude Code, Terraform, Azure CLI, SSH, Nmap, Nessus, Docker, Git, and GitHub together to build, scan, remediate, validate, document, and publish the case study.
+
+<img src="reports/tooling/screenshots/ai-assisted-tooling-workflow-sanitized.png" alt="Sanitized screenshot of VS Code with Codex, Claude Code, Markdown reports, and GitHub publishing workflow" width="900">
+
 AI was used throughout the project to accelerate the work while still keeping the technical decisions reviewable:
 
 - Designing the Terraform case study structure
