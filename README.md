@@ -2,6 +2,8 @@
 
 ![AI-Assisted Azure IaC Vulnerability Remediation Case Study thumbnail](assets/case-study-thumbnail.png)
 
+## Enterprise Security Workflow: From Detection to Remediation
+
 This case study documents a hands-on Azure security environment built with Terraform and guided end to end with AI-assisted engineering tools, including GitHub Copilot and Codex. It demonstrates a full enterprise-style vulnerability management lifecycle:
 
 1. Build cloud infrastructure with Infrastructure as Code.
