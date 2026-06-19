@@ -231,6 +231,87 @@ Terraform deployed:
 - Target Ubuntu VM
 - Nessus scanner Ubuntu VM
 
+Sanitized Terraform snippet:
+
+```hcl
+provider "azurerm" {
+  resource_provider_registrations = "none"
+  features {}
+}
+
+locals {
+  common_tags = {
+    Environment = "Lab"
+    Owner       = "James"
+    Project     = "Terraform-Learning"
+  }
+}
+
+resource "azurerm_resource_group" "lab" {
+  name     = var.resource_group_name
+  location = var.location
+  tags     = local.common_tags
+}
+
+resource "azurerm_virtual_network" "lab" {
+  name                = "${var.name_prefix}-vnet"
+  address_space       = [var.vnet_address_space]
+  location            = azurerm_resource_group.lab.location
+  resource_group_name = azurerm_resource_group.lab.name
+  tags                = local.common_tags
+}
+
+resource "azurerm_network_security_group" "scanner" {
+  name                = "${var.name_prefix}-scanner-nsg"
+  location            = azurerm_resource_group.lab.location
+  resource_group_name = azurerm_resource_group.lab.name
+
+  security_rule {
+    name                       = "Allow-Nessus-UI-From-My-IP"
+    priority                   = 110
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "8834"
+    source_address_prefix      = var.allowed_ssh_cidr
+    destination_address_prefix = "*"
+  }
+
+  tags = local.common_tags
+}
+
+resource "azurerm_linux_virtual_machine" "scanner" {
+  name                = "${var.name_prefix}-nessus-scanner-vm"
+  location            = azurerm_resource_group.lab.location
+  resource_group_name = azurerm_resource_group.lab.name
+  size                = var.scanner_vm_size
+  admin_username      = var.admin_username
+
+  network_interface_ids = [
+    azurerm_network_interface.scanner.id
+  ]
+
+  admin_ssh_key {
+    username   = var.admin_username
+    public_key = file(pathexpand(var.ssh_public_key_path))
+  }
+
+  source_image_reference {
+    publisher = "Canonical"
+    offer     = "ubuntu-24_04-lts"
+    sku       = "server"
+    version   = "latest"
+  }
+
+  tags = merge(local.common_tags, {
+    Role = "Scanner"
+  })
+}
+```
+
+Sensitive values such as subscription ID, local public IP, SSH key material, state files, and tfvars values were excluded from the public repository.
+
 The purpose of this phase was to show Infrastructure as Code fundamentals: repeatable infrastructure, variables, outputs, provider configuration, and cost-controlled case study design.
 
 Key Terraform files:
