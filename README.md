@@ -366,6 +366,16 @@ Nmap produced strong discovery evidence:
 - Directory listing enabled
 - Backup folder exposed
 
+### Vulnerable Application Evidence
+
+The case study used intentionally vulnerable applications and services to create realistic discovery, scanner, and remediation evidence. These services were reached through SSH tunnels and internal Azure networking rather than broad public exposure.
+
+| DVWA | OWASP Juice Shop |
+| --- | --- |
+| <img src="reports/application-evidence/screenshots/dvwa-home.png" alt="DVWA vulnerable web application evidence" width="420"> | <img src="reports/application-evidence/screenshots/juice-shop-home.png" alt="OWASP Juice Shop vulnerable web application evidence" width="420"> |
+| Metasploitable Web Landing Page | Metasploitable Apache Tomcat |
+| <img src="reports/application-evidence/screenshots/metasploitable-home.png" alt="Metasploitable web landing page evidence" width="420"> | <img src="reports/application-evidence/screenshots/metasploitable-tomcat.png" alt="Metasploitable Apache Tomcat evidence" width="420"> |
+
 Nessus found:
 
 ```text
@@ -597,7 +607,7 @@ Post-remediation evidence:
 
 | Remediation Proof | Scanner Validation |
 | --- | --- |
-| ![High Severity Post-Remediation Key Findings](reports/phase-4-high-severity-remediation/screenshots/high-severity-post-remediation-key-findings.png) | ![Nessus High Severity Post-Remediation](reports/phase-4-high-severity-remediation/screenshots/nessus-high-severity-post-remediation-validation.png) |
+| `metasploitable2-lab` removed<br>`vulnerable-apache-249` removed<br>Ports `8021`, `8022`, `8023`, `8082`, `8083`, `8180`, and `8667` confirmed closed<br>Host health check result: `PASS` | <img src="reports/phase-4-high-severity-remediation/screenshots/nessus-high-severity-post-remediation-validation.png" alt="Nessus post-remediation validation showing zero Critical, High, and Medium findings" width="520"> |
 
 ### 7. Jira-Style Closure
 
