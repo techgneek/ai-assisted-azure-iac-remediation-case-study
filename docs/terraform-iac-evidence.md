@@ -246,16 +246,32 @@ scanner_vm_size  = "Standard_D2ls_v7"
 os_disk_size_gb  = 30
 ```
 
-## Destroy Evidence Placeholder
+## Destroy Evidence
 
-After the case study environment is destroyed, add:
-
-1. Screenshot showing the resource group empty or removed.
-2. The destroy command used.
-3. A note confirming no case study compute resources remain running.
+The case study environment was destroyed with Terraform after the remediation workflow, validation scans, and documentation were completed.
 
 Destroy command:
 
 ```bash
 terraform destroy
 ```
+
+Terraform confirmed the cleanup:
+
+```text
+Plan: 0 to add, 0 to change, 13 to destroy.
+Destroy complete! Resources: 13 destroyed.
+```
+
+| Evidence | Screenshot |
+|---|---|
+| Sanitized Terraform destroy plan | ![Sanitized Terraform destroy plan](../reports/destroy/screenshots/terraform-destroy-plan-sanitized.png) |
+| Terraform destroy completion | ![Terraform destroy complete](../reports/destroy/screenshots/terraform-destroy-complete.png) |
+| Azure post-destroy validation | ![Azure all resources after destroy](../reports/destroy/screenshots/azure-all-resources-post-destroy-sanitized.png) |
+
+Validation notes:
+
+1. Terraform removed the case study virtual machines, public IP addresses, network interfaces, managed disks, network security groups, virtual network, subnet, and resource group.
+2. Azure Resource Manager was checked after destroy to confirm the case study resources were no longer present.
+3. The remaining `NetworkWatcherRG` entry shown in Azure is an Azure-managed/default networking resource and was not part of the Terraform case study infrastructure.
+4. Destroying the environment stopped ongoing compute charges and reduced the chance of orphaned lab resources creating avoidable cloud spend.

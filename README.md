@@ -783,19 +783,35 @@ tflearn-ubuntu-vm          VM deallocated
 
 ## Destroy the Case Study Environment
 
-When finished, destroy the case study environment with Terraform:
+When finished, the case study environment was destroyed with Terraform:
 
 ```bash
 terraform destroy
 ```
 
-This is the cleanest way to remove the case study resources and stop ongoing Azure charges.
+Terraform planned the removal of the full environment and then confirmed the cleanup completed successfully:
 
-Destroy evidence to add after cleanup:
+```text
+Plan: 0 to add, 0 to change, 13 to destroy.
+Destroy complete! Resources: 13 destroyed.
+```
 
-- Screenshot showing the resource group empty or removed.
-- Confirmation that no VMs, disks, NICs, public IPs, or NSGs remain.
-- Final note that ongoing Azure compute charges have stopped.
+| Terraform Destroy Plan | Destroy Completion |
+|---|---|
+| <img src="reports/destroy/screenshots/terraform-destroy-plan-sanitized.png" alt="Sanitized Terraform destroy plan showing 13 resources planned for deletion" width="520"> | <img src="reports/destroy/screenshots/terraform-destroy-complete.png" alt="Terraform destroy complete confirmation showing 13 resources destroyed" width="520"> |
+
+Azure was then checked to confirm that the case study resources were no longer present. The remaining `NetworkWatcherRG` resource group is an Azure-managed/default networking resource, not part of the Terraform case study buildout.
+
+<p align="center">
+  <img src="reports/destroy/screenshots/azure-all-resources-post-destroy-sanitized.png" alt="Azure all resources view after Terraform destroy showing only the default NetworkWatcher resource" width="900">
+</p>
+
+Final cleanup validation:
+
+- Terraform removed the VMs, managed disks, NICs, public IPs, NSGs, VNet, subnet, and resource group that were part of this case study.
+- No case study compute resources remained running after destroy.
+- Ongoing VM compute charges stopped once the environment was destroyed.
+- This mirrors an enterprise FinOps habit: remove unused workstations, servers, disks, public IPs, and test infrastructure when the business purpose is complete.
 
 Supporting evidence page:
 
@@ -809,4 +825,3 @@ Future improvements:
 - Add a Windows VM for credentialed Windows scanning and Defender/Sysmon telemetry.
 - Add a lightweight SIEM workflow with Microsoft Sentinel.
 - Convert the case study into a slide deck.
-- Add final post-destroy evidence after the Terraform cleanup is complete.
