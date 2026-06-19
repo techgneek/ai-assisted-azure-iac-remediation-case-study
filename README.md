@@ -685,9 +685,40 @@ This project demonstrates practical skills across multiple areas:
 - Evidence collection
 - Portfolio-ready technical documentation
 
-## Cost Control
+## Cost Control and FinOps Lesson
 
-VM compute cost accrues while the case study VMs are running. Deallocate the VMs when not actively working:
+Security work in the cloud has a cost impact. This case study intentionally included cost tracking because enterprise security teams are often responsible for building temporary test environments, scanners, sandboxes, and investigation workstations. Those resources need the same operational discipline as production systems.
+
+Azure Cost Management showed the following posted Month-to-Date actual cost for the resource group as of June 18, 2026. Billing data can lag, so final numbers may change slightly after usage is rated.
+
+| Service | Posted Cost |
+| --- | ---: |
+| Virtual Machines | `$1.4079` |
+| Virtual Network | `$0.6388` |
+| Storage | `$0.3805` |
+| Bandwidth | `$0.0000` |
+| **Total posted cost** | **`$2.4272`** |
+
+Daily posted cost:
+
+| Date | Posted Cost |
+| --- | ---: |
+| 2026-06-15 | `$0.1793` |
+| 2026-06-16 | `$0.1712` |
+| 2026-06-17 | `$0.9322` |
+| 2026-06-18 | `$1.1445` |
+
+The biggest controllable cost in this case study was VM compute. Deallocating stopped the VM compute meter while preserving the disks, NICs, public IPs, and configuration so the environment could be started again later.
+
+This matters in an enterprise because unused cloud workstations, test servers, scanners, and temporary engineering environments can quietly accumulate spend. A good security engineer should know how to:
+
+- Tag resources so cost can be traced to an owner, project, and environment.
+- Deallocate idle VMs when active testing is finished.
+- Destroy temporary environments when the work is complete.
+- Review costs by resource group, service, and date.
+- Communicate residual costs such as disks, public IPs, and storage.
+
+Deallocate the VMs when not actively working:
 
 ```bash
 az vm deallocate --resource-group rg-terraform-learning-lab --name tflearn-ubuntu-vm
@@ -705,6 +736,13 @@ Check status:
 
 ```bash
 az vm list -d -g rg-terraform-learning-lab --query "[].{name:name,powerState:powerState,privateIps:privateIps,publicIps:publicIps}" -o table
+```
+
+Current validation after the final screenshot session:
+
+```text
+tflearn-nessus-scanner-vm  VM deallocated
+tflearn-ubuntu-vm          VM deallocated
 ```
 
 ## Destroy the Case Study Environment
