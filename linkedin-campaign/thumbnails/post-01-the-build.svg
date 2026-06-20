@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627" role="img" aria-labelledby="title desc">
-  <title id="title">Post 1 thumbnail - The Build</title>
-  <desc id="desc">AI-assisted Azure IaC case study thumbnail for Terraform buildout.</desc>
+  <title id="title">Post 1 thumbnail - AI-assisted case study build</title>
+  <desc id="desc">Opening LinkedIn thumbnail for the AI-assisted Azure IaC remediation case study, highlighting GitHub Copilot, Codex Agent, Terraform, Azure, and Nessus.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#07111f"/>
@@ -15,16 +15,25 @@
     <path d="M115 132 H388 V230 H115 Z M208 230 V318 H488 V430 H732"/>
     <circle cx="115" cy="132" r="6" fill="#38bdf8"/><circle cx="388" cy="230" r="6" fill="#38bdf8"/><circle cx="732" cy="430" r="6" fill="#38bdf8"/>
   </g>
-  <g transform="translate(722 110)" opacity="0.95">
-    <rect x="0" y="0" width="328" height="328" rx="28" fill="#0f172a" stroke="#38bdf8" stroke-width="3"/>
-    <path d="M84 112 L164 64 L244 112 V214 L164 262 L84 214 Z" fill="#172554" stroke="#7dd3fc" stroke-width="5"/>
-    <path d="M164 64 V262 M84 112 L164 160 L244 112 M84 214 L164 160 L244 214" stroke="#7dd3fc" stroke-width="5" fill="none"/>
-    <text x="164" y="300" text-anchor="middle" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="32" font-weight="700">Terraform</text>
+  <g transform="translate(690 86)" opacity="0.98">
+    <rect x="0" y="0" width="418" height="404" rx="30" fill="#0f172a" stroke="#38bdf8" stroke-width="3"/>
+    <text x="209" y="54" text-anchor="middle" fill="#e0f2fe" font-family="Arial, sans-serif" font-size="28" font-weight="800">AI AGENT WORKFLOW</text>
+    <rect x="42" y="88" width="334" height="54" rx="14" fill="#111827" stroke="#22d3ee" stroke-width="2"/>
+    <text x="209" y="124" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="25" font-weight="800">GitHub / Copilot</text>
+    <rect x="42" y="158" width="334" height="54" rx="14" fill="#111827" stroke="#a78bfa" stroke-width="2"/>
+    <text x="209" y="194" text-anchor="middle" fill="#f5f3ff" font-family="Arial, sans-serif" font-size="25" font-weight="800">Codex Agent</text>
+    <rect x="42" y="228" width="334" height="54" rx="14" fill="#111827" stroke="#34d399" stroke-width="2"/>
+    <text x="209" y="264" text-anchor="middle" fill="#dcfce7" font-family="Arial, sans-serif" font-size="25" font-weight="800">Terraform + Azure</text>
+    <rect x="42" y="298" width="334" height="54" rx="14" fill="#111827" stroke="#fb7185" stroke-width="2"/>
+    <text x="209" y="334" text-anchor="middle" fill="#ffe4e6" font-family="Arial, sans-serif" font-size="25" font-weight="800">Nmap + Nessus</text>
+    <path d="M209 142 V158 M209 212 V228 M209 282 V298" stroke="#67e8f9" stroke-width="5" stroke-linecap="round"/>
   </g>
   <text x="76" y="94" fill="#67e8f9" font-family="Arial, sans-serif" font-size="30" font-weight="700">POST 01 / 07</text>
-  <text x="76" y="190" fill="#ffffff" font-family="Arial, sans-serif" font-size="74" font-weight="800">THE BUILD</text>
-  <text x="76" y="252" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="34" font-weight="600">AI-assisted Azure infrastructure</text>
-  <text x="76" y="318" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="28">Terraform • Azure • Copilot • Codex</text>
-  <rect x="76" y="502" width="514" height="54" rx="27" fill="#0f172a" stroke="#22d3ee" stroke-width="2"/>
-  <text x="333" y="538" text-anchor="middle" fill="#e0f2fe" font-family="Arial, sans-serif" font-size="24" font-weight="700">Infrastructure before investigation</text>
+  <text x="76" y="178" fill="#ffffff" font-family="Arial, sans-serif" font-size="64" font-weight="900">AI-ASSISTED</text>
+  <text x="76" y="246" fill="#ffffff" font-family="Arial, sans-serif" font-size="64" font-weight="900">AZURE IAC</text>
+  <text x="76" y="314" fill="#ffffff" font-family="Arial, sans-serif" font-size="64" font-weight="900">REMEDIATION</text>
+  <text x="76" y="378" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="31" font-weight="600">From cloud buildout to Critical findings</text>
+  <text x="76" y="425" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="27">GitHub / Copilot • Codex Agent • Terraform • Azure</text>
+  <rect x="76" y="512" width="554" height="54" rx="27" fill="#0f172a" stroke="#22d3ee" stroke-width="2"/>
+  <text x="353" y="548" text-anchor="middle" fill="#e0f2fe" font-family="Arial, sans-serif" font-size="24" font-weight="700">A security case study built end to end</text>
 </svg>
