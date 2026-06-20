@@ -4,7 +4,28 @@
 
 ## Enterprise Security Workflow: From Detection to Remediation
 
-This case study documents a hands-on Azure security environment built with Terraform and guided end to end with AI-assisted engineering tools, including GitHub Copilot and Codex. It demonstrates a full enterprise-style vulnerability management lifecycle:
+This case study follows the full lifecycle of an AI-assisted Azure security remediation effort: build the infrastructure, introduce controlled risk, detect Critical findings, simulate enterprise change control, remediate, validate, document, and destroy the environment.
+
+### Case Study Navigation
+
+| Stage | What It Covers |
+| --- | --- |
+| [Executive Summary](#executive-summary) | The full story in brief, including final remediation outcome |
+| [Visual Case Study Snapshot](#visual-case-study-snapshot) | High-level workflow and before/after evidence |
+| [Architecture](#architecture) | Azure VNet, target VM, scanner VM, and security posture |
+| [Tooling](#tooling) | GitHub Copilot, Codex Agent, Terraform, Azure CLI, Nessus, Nmap, Docker, and GitHub |
+| [Phase 1: Terraform Buildout](#phase-1-terraform-buildout) | IaC deployment of the Azure environment |
+| [Phase 2: Baseline Scanning and Juice Shop](#phase-2-baseline-scanning-and-juice-shop) | Initial scans and early web app telemetry |
+| [Phase 3: Vulnerable Mode](#phase-3-vulnerable-mode) | Controlled vulnerable services and Nmap discovery evidence |
+| [Phase 4: First Remediation Practice](#phase-4-first-remediation-practice) | Lower-risk remediation practice and validation |
+| [Phase 4 Redo: High-Severity Enterprise Remediation](#phase-4-redo-high-severity-enterprise-remediation) | Critical findings, stronger telemetry, and main portfolio storyline |
+| [Enterprise Workflow Simulation](#enterprise-workflow-simulation) | Detection, triage, owner notification, CAB approval, remediation, validation, and closure |
+| [Key Evidence Links](#key-evidence-links) | Reports, scripts, screenshots, scan outputs, and validation evidence |
+| [Budget and Lessons Learned](#budget-and-lessons-learned) | Cloud cost tracking, deallocation, destroy discipline, and FinOps lessons |
+| [Destroy the Case Study Environment](#destroy-the-case-study-environment) | Terraform destroy proof and final Azure cleanup evidence |
+| [LinkedIn Story Campaign](#linkedin-story-campaign) | Two-week post series and thumbnail assets |
+
+The environment was built with Terraform and guided end to end with AI-assisted engineering tools, including GitHub Copilot and Codex. It demonstrates a full enterprise-style vulnerability management lifecycle:
 
 1. Build cloud infrastructure with Infrastructure as Code.
 2. Deploy a scanner and a vulnerable target.
