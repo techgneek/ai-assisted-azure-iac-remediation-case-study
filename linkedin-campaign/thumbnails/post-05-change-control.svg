@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627" role="img" aria-labelledby="title desc">
+  <title id="title">Post 5 thumbnail - Change Control</title>
+  <desc id="desc">AI-assisted Azure IaC case study thumbnail for enterprise triage and CAB approval.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="0.6" stop-color="#312e81"/><stop offset="1" stop-color="#164e63"/></linearGradient></defs>
+  <rect width="1200" height="627" fill="url(#bg)"/>
+  <g transform="translate(678 102)" fill="none" stroke="#c4b5fd" stroke-width="4">
+    <rect x="0" y="0" width="390" height="390" rx="28" fill="#111827" opacity="0.88"/>
+    <path d="M78 94 H312 M78 156 H312 M78 218 H244 M78 280 H284"/>
+    <circle cx="52" cy="94" r="12" fill="#a78bfa"/>
+    <circle cx="52" cy="156" r="12" fill="#a78bfa"/>
+    <circle cx="52" cy="218" r="12" fill="#a78bfa"/>
+    <circle cx="52" cy="280" r="12" fill="#a78bfa"/>
+    <path d="M266 250 L314 298 L394 196" stroke="#34d399" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="76" y="94" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="30" font-weight="700">POST 05 / 07</text>
+  <text x="76" y="178" fill="#ffffff" font-family="Arial, sans-serif" font-size="66" font-weight="900">CHANGE</text>
+  <text x="76" y="246" fill="#ffffff" font-family="Arial, sans-serif" font-size="66" font-weight="900">CONTROL</text>
+  <text x="76" y="314" fill="#ddd6fe" font-family="Arial, sans-serif" font-size="34" font-weight="700">Detection is only half the job</text>
+  <text x="76" y="382" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="28">Triage • owner approval • CAB-style workflow</text>
+  <rect x="76" y="502" width="554" height="54" rx="27" fill="#1e1b4b" stroke="#a78bfa" stroke-width="2"/>
+  <text x="353" y="538" text-anchor="middle" fill="#ede9fe" font-family="Arial, sans-serif" font-size="24" font-weight="800">The enterprise part begins</text>
+</svg>

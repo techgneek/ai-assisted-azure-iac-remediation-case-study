@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627" role="img" aria-labelledby="title desc">
+  <title id="title">Post 1 thumbnail - The Build</title>
+  <desc id="desc">AI-assisted Azure IaC case study thumbnail for Terraform buildout.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.52" stop-color="#102a43"/>
+      <stop offset="1" stop-color="#0b3b4c"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="6" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="627" fill="url(#bg)"/>
+  <path d="M0 474 C240 384 344 548 592 456 C813 374 911 408 1200 302 L1200 627 L0 627 Z" fill="#0e7490" opacity="0.22"/>
+  <g stroke="#38bdf8" stroke-width="2" opacity="0.34">
+    <path d="M115 132 H388 V230 H115 Z M208 230 V318 H488 V430 H732"/>
+    <circle cx="115" cy="132" r="6" fill="#38bdf8"/><circle cx="388" cy="230" r="6" fill="#38bdf8"/><circle cx="732" cy="430" r="6" fill="#38bdf8"/>
+  </g>
+  <g transform="translate(722 110)" opacity="0.95">
+    <rect x="0" y="0" width="328" height="328" rx="28" fill="#0f172a" stroke="#38bdf8" stroke-width="3"/>
+    <path d="M84 112 L164 64 L244 112 V214 L164 262 L84 214 Z" fill="#172554" stroke="#7dd3fc" stroke-width="5"/>
+    <path d="M164 64 V262 M84 112 L164 160 L244 112 M84 214 L164 160 L244 214" stroke="#7dd3fc" stroke-width="5" fill="none"/>
+    <text x="164" y="300" text-anchor="middle" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="32" font-weight="700">Terraform</text>
+  </g>
+  <text x="76" y="94" fill="#67e8f9" font-family="Arial, sans-serif" font-size="30" font-weight="700">POST 01 / 07</text>
+  <text x="76" y="190" fill="#ffffff" font-family="Arial, sans-serif" font-size="74" font-weight="800">THE BUILD</text>
+  <text x="76" y="252" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="34" font-weight="600">AI-assisted Azure infrastructure</text>
+  <text x="76" y="318" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="28">Terraform • Azure • Copilot • Codex</text>
+  <rect x="76" y="502" width="514" height="54" rx="27" fill="#0f172a" stroke="#22d3ee" stroke-width="2"/>
+  <text x="333" y="538" text-anchor="middle" fill="#e0f2fe" font-family="Arial, sans-serif" font-size="24" font-weight="700">Infrastructure before investigation</text>
+</svg>

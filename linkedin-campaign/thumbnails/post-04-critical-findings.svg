@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627" role="img" aria-labelledby="title desc">
+  <title id="title">Post 4 thumbnail - Critical Findings</title>
+  <desc id="desc">AI-assisted Azure IaC case study thumbnail for Nessus Critical findings.</desc>
+  <defs><radialGradient id="bg" cx="62%" cy="45%" r="72%"><stop offset="0" stop-color="#7f1d1d"/><stop offset="0.48" stop-color="#1f2937"/><stop offset="1" stop-color="#020617"/></radialGradient></defs>
+  <rect width="1200" height="627" fill="url(#bg)"/>
+  <g transform="translate(720 110)">
+    <polygon points="180,0 360,320 0,320" fill="#450a0a" stroke="#ef4444" stroke-width="6"/>
+    <text x="180" y="215" text-anchor="middle" fill="#fee2e2" font-family="Arial, sans-serif" font-size="148" font-weight="900">!</text>
+    <text x="180" y="378" text-anchor="middle" fill="#fecaca" font-family="Arial, sans-serif" font-size="30" font-weight="800">CRITICAL FINDINGS</text>
+  </g>
+  <text x="76" y="94" fill="#fca5a5" font-family="Arial, sans-serif" font-size="30" font-weight="700">POST 04 / 07</text>
+  <text x="76" y="184" fill="#ffffff" font-family="Arial, sans-serif" font-size="72" font-weight="900">NESSUS</text>
+  <text x="76" y="258" fill="#ffffff" font-family="Arial, sans-serif" font-size="72" font-weight="900">LIT UP</text>
+  <text x="76" y="326" fill="#fecaca" font-family="Arial, sans-serif" font-size="34" font-weight="700">4 Critical findings detected</text>
+  <text x="76" y="390" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="28">The scanner result became an enterprise conversation</text>
+  <rect x="76" y="502" width="540" height="54" rx="27" fill="#450a0a" stroke="#ef4444" stroke-width="2"/>
+  <text x="346" y="538" text-anchor="middle" fill="#fee2e2" font-family="Arial, sans-serif" font-size="24" font-weight="800">Finding risk is the opening scene</text>
+</svg>

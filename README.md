@@ -213,6 +213,23 @@ Prompt previews:
 | Enterprise workflow | "Document the process as if this happened in a production environment with triage, CAB approval, remediation, and validation..." |
 | High-severity remediation | "Generate Critical findings internally, remediate them with a script, and validate with Nmap, Nessus, and a host health check..." |
 
+## LinkedIn Story Campaign
+
+This case study was also converted into a two-week LinkedIn drip campaign for sharing the project in a recruiter-friendly format.
+
+The campaign includes:
+
+- 7 succinct story-driven posts
+- Every-other-day posting cadence
+- GitHub case study link in every post
+- Matching timeline thumbnails for each post
+- A final lessons learned and cost-control closeout
+
+Campaign package:
+
+- [LinkedIn drip campaign](linkedin-campaign/linkedin-drip-campaign.md)
+- [Thumbnail assets](linkedin-campaign/thumbnails/)
+
 ## Project Structure
 
 ```text
